@@ -36,7 +36,7 @@ Here we run through a sample execution of the ship-detector task. We will find a
     random_str = str(uuid.uuid4())
     output_location = join('platform-stories/trial-runs', random_str)
 
-    ship_wf.savedata(deploy_task.outputs.results, join(output_location, 'ship_detections'))
+    ship_wf.savedata(ship_task.outputs.results, join(output_location, 'ship_detections'))
     ```
 
 5. Execute the workflow:  
