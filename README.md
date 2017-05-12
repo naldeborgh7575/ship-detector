@@ -84,7 +84,12 @@ Then build the image locally. Building requires input environment variables for 
 
 ```bash
 cd ship-detector
-docker build --build-arg PROTOUSER=<GitHub username> --build-arg PROTOPASSWORD=<GitHub pawwsord> --build-arg AWS_ACCESS_KEY_ID=<AWS access key> --build-arg AWS_SECRET_ACCESS_KEY=<AWS secret key> --build-arg AWS_SESSION_TOKEN=<AWS session token> -t ship-detector .
+docker build --build-arg PROTOUSER=<GitHub username> \
+    --build-arg PROTOPASSWORD=<GitHub pawwsord> \
+    --build-arg AWS_ACCESS_KEY_ID=<AWS access key> \
+    --build-arg AWS_SECRET_ACCESS_KEY=<AWS secret key> \
+    --build-arg AWS_SESSION_TOKEN=<AWS session token> \
+    -t ship-detector .
 ```
 
 ### Try out locally
