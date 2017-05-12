@@ -24,7 +24,7 @@ Here we run through a sample execution of the ship-detector task. We will find a
 2. Create a task instance and set the required [inputs](#inputs):  
 
     ```python
-    ship_task = gbdx.Task('chip-detector')
+    ship_task = gbdx.Task('ship-detector')
     ship_task.inputs.pan_image = join(input_location, 'pan_image')
     ship_task.inputs.ms_image = join(input_location, 'ms_image')
     ```
@@ -61,7 +61,7 @@ GBDX input ports can only be of "Directory" or "String" type. Booleans, integers
 | ms_image | directory | Contains a multispectral GeoTiff image in which to detect ships. This directory should only contain one image, otherwise a file will be selected arbitrarily. | True |
 | pan_image | directory | Contains a pansharpened version of ms_image. This directory should only contain one image, otherwise a file will be selected arbitrarily. | True |
 
-## Output Ports
+## Outputs
 
 | Name  | Type | Description |
 |---|---|---|
