@@ -80,11 +80,11 @@ Clone the repository:
 git clone https://github.com/platformstories/ship-detector
 ```
 
-Then
+Then build the image locally. Building requires input environment variables for protogen and GBDX AWS credentials. You will need to contact kostas.stamatiou@digitalglobe.com for access to Protogen.
 
 ```bash
 cd ship-detector
-docker build -t ship-detector .
+docker build --build-arg PROTOUSER=<GitHub username> --build-arg PROTOPASSWORD=<GitHub pawwsord> --build-arg AWS_ACCESS_KEY_ID=<AWS access key> --build-arg AWS_SECRET_ACCESS_KEY=<AWS secret key> --build-arg AWS_SESSION_TOKEN=<AWS session token> -t ship-detector .
 ```
 
 ### Try out locally
