@@ -1,6 +1,6 @@
 {
     "name": "ship-detector",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "Detects ship bounding boxes in a given image strip using a trained CNN classifier to deploy on Protogen-generated region proposals.",
     "properties": {
         "isPublic": true,
@@ -18,6 +18,13 @@
             "type": "directory",
             "description": "Contains a pansharpened version of ms_image. This directory should only contain one image, otherwise a file will be selected arbitrarily",
             "required": true
+        }
+    ],
+    "outputPortDescriptors": [
+        {
+            "name": "results",
+            "type": "directory",
+            "description": "Contains a geojson with protogen region proposals, each given a classification of 0 (no ship) or 1 (ship)."
         }
     ],
     "containerDescriptors": [
