@@ -24,7 +24,7 @@
         {
             "type": "DOCKER",
             "properties": {
-                "image": "splatformstories/ship-detector",
+                "image": "platformstories/ship-detector",
                 "domain": "nvidiagpu"
             },
             "command": "python /ship-detector.py",
